@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>video</title>
+</head>
+<body>
+    <video src="./video.mp4" id="animation" muted></video>
+    <div id="crutch"></div>
     <style>
         * {
             padding: 0;
@@ -12,15 +16,13 @@
             background-color: #ffffff;
             overflow-x: hidden;
         }
-        .animation {
-            height: 100vh;
-            width: 100vw;
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+        video {
+            object-fit: cover;
         }
     </style>
-</head>
-<body>
-    <video src="./video.mp4" id="animation" muted></video>
-    <div id="crutch"></div>
     <script>
         const animation = document.getElementById('animation')
         const height = document.getElementById('crutch')
